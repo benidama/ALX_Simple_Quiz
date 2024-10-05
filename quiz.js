@@ -1,10 +1,11 @@
 function checkAnswer() {
-  const correctAnswer = "4";
-  const userAnswer = document.querySelector("input").value.checked;
-  if (userAnswer === correctAnswer) {
-    document.textContent("Correct! Well done.");
+  let correctAnswer = "4";
+  let userAnswer = document.querySelector("input").value.checked;
+  if (correctAnswer === userAnswer) {
+    document.getElementById("feedback").innerHTML = "Correct! Well done.";
   } else {
-    document.textContent("That's incorrect. Try again!");
+    document.getElementById("feedback").innerHTML =
+      "That's incorrect. Try again!";
   }
 }
 
